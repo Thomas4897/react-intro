@@ -28,11 +28,21 @@ export class App extends Component {
     });
   };
 
+  // Prefered toogle function
   toggle = () => {
-    this.setState({
-      toggle: !this.state.toggle,
+    this.setState((prevState) => {
+      return {
+        toggle: !prevState.toggle,
+      };
     });
   };
+
+  // Alternative:
+  // toggle = () => {
+  //   this.setState({
+  //     toggle: !this.state.toggle,
+  //   });
+  // };
 
   render() {
     return (
